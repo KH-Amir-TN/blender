@@ -15,6 +15,7 @@ import { StoresListComponent } from './components/stores-list/stores-list.compon
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TestComponent } from './test/test.component';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TestComponent } from './test/test.component';
     ContactUsComponent,
     NotFoundComponent,
     TestComponent
+    Test2Component
   ],
   imports: [
     BrowserModule,
