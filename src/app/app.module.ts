@@ -14,6 +14,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { StoresListComponent } from './components/stores-list/stores-list.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ProductsListComponent,
     StoresListComponent,
     ContactUsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    Test2Component
   ],
   imports: [
     BrowserModule,
