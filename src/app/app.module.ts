@@ -19,6 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { StoreItemComponent } from './components/store-item/store-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsService } from './services/http-services/products.service';
 
 @NgModule({
   declarations: [
@@ -40,10 +42,14 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     RouterModule,
     AppRoutingModule ,
+
     BrowserModule,
     HttpClientModule,
+
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

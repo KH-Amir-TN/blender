@@ -3,12 +3,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/Models/Product';
 import { ProductsService } from 'src/app/services/products.service';
 
+import { ProductsService } from 'src/app/services/http-services/products.service';
+
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit {
+
   pageNumber:number=1
   products:Array<Product>
   constructor(private productsservice:ProductsService,
@@ -34,6 +37,24 @@ export class ProductsListComponent implements OnInit {
     this.pageNumber++;
     const link=['products',this.pageNumber]
     this.router.navigate(link)
+
+
+  public products = null ;
+
+  constructor(private httpProducts : ProductsService) { }
+
+  ngOnInit(): void {
+    this.getProducts(0);
+  }
+
+  getProducts(pageNum : Number){
+    this.httpProducts.getProducts(pageNum).subscribe(
+      products => {
+        this.products = products ;
+        
+      }
+    )
+
   }
   previousPage()
   {
@@ -44,6 +65,8 @@ export class ProductsListComponent implements OnInit {
     const link=['products',this.pageNumber]
     this.router.navigate(link)
   }
+
+
 
 
 }
