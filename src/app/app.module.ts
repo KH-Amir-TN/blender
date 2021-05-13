@@ -14,6 +14,8 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { StoresListComponent } from './components/stores-list/stores-list.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsService } from './services/http-services/products.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     RouterModule,
-    AppRoutingModule 
+    AppRoutingModule ,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
