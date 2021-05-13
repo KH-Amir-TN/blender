@@ -14,11 +14,6 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { StoresListComponent } from './components/stores-list/stores-list.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ProductItemComponent } from './product-item/product-item.component';
-import { StoreItemComponent } from './components/store-item/store-item.component';
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/http-services/products.service';
 
@@ -29,11 +24,7 @@ import { ProductsService } from './services/http-services/products.service';
     ProductsListComponent,
     StoresListComponent,
     ContactUsComponent,
-    NotFoundComponent,
-    NavbarComponent,
-    FooterComponent,
-    ProductItemComponent,
-    StoreItemComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -42,12 +33,7 @@ import { ProductsService } from './services/http-services/products.service';
     FormsModule,
     RouterModule,
     AppRoutingModule ,
-
-    BrowserModule,
-    HttpClientModule,
-
     HttpClientModule
-
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

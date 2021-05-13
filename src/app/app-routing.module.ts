@@ -9,7 +9,6 @@ import { StoresListComponent } from './components/stores-list/stores-list.compon
 
 const routes: Routes = [
  {path:"home" , component:HomeComponent} ,
- {path:"products/:pageNumber" , component:ProductsListComponent} ,
  {path:"products" , component:ProductsListComponent} ,
  {path:"stores" , component:StoresListComponent} ,
  {path:"contact" , component:ContactUsComponent} ,
